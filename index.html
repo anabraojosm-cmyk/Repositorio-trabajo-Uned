@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <title>Mi modelo 3D</title>
+  <!-- Carga el visor X3DOM -->
   <script type="text/javascript" src="https://www.x3dom.org/download/x3dom.js"></script>
   <link rel="stylesheet" type="text/css" href="https://www.x3dom.org/download/x3dom.css"/>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+    x3d {
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <h1>Mi modelo 3D</h1>
-  <x3d width='800px' height='600px'>
+
+  <!-- Visor del modelo -->
+  <x3d width="800px" height="600px">
     <scene>
+      <!-- Asegúrate de que el nombre coincide con tu archivo .x3d -->
       <inline url="TablaMapaUned_01.x3d"></inline>
     </scene>
   </x3d>
+
+  <p>
+    Si el modelo no se carga, asegúrate de que el archivo <code>TablaMapaUned_01.x3d</code> contiene la línea
+    <code>&lt;ImageTexture url="textura.png"/&gt;</code> y que <strong>tanto el .x3d como la imagen .png</strong> están en la misma carpeta que este archivo HTML.
+  </p>
 </body>
 </html>
